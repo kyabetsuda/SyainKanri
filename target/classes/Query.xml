@@ -30,7 +30,7 @@
 		update syaincode set s_idx=#s_idx#, s_name1=#s_name1#, s_name2=#s_name2#, sex=#sex#, ymd=#ymd#, nyusya_ymd=#nyusya_ymd#, zipcode=#zipcode#, addr1=#addr1#, addr2=#addr2#, bango=#bango# where s_idx=#s_idx#
 	</update>
 	
-	<!-- <delete id="delete" parameterClass="int">
-		delete from erpex2 <include refid="whereQuery"/>
-	</delete> -->
+	<delete id="delete" parameterClass="int">
+		delete from syaincode where s_idx=#s_idx#
+	</delete>
 </sqlMap>
