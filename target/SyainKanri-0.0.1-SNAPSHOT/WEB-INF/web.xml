@@ -10,6 +10,16 @@
 		<welcome-file>default.htm</welcome-file>
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
+<<<<<<< HEAD
+=======
+	
+	<context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+        	/WEB-INF/classes/struts.xml
+        </param-value>
+    </context-param>
+>>>>>>> origin/master
 
 	<!-- Struts2 FilterDisPatcher
 		스트러츠2에서는 기존에 썼던 ActionServlet대신 FilterDispatcher로 컨트롤러 역할을 한다.
