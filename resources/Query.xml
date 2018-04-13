@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+ "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap>
+
+	<!-- 실제 쿼리문  시작 -->
+	<sql id="alldata">select * from erpex2 order by no asc</sql>
+	<sql id="whereQuery">where no=#no#</sql>
+
+	<select id="selectAllData" resultClass="jp.TsudaJun.SyainKanri.Model.Syain">
+		select * from syaincode
+	</select>
+
+	<select id="getmaxno" resultClass="int">
+		select ifnull(max(s_idx), 0) +1 from syaincode
+	</select>
+
+	<insert id="insert" parameterClass="jp.TsudaJun.SyainKanri.Model.Syain">
+		insert into syaincode values(#s_idx#,#s_name1#,#s_name2#,#sex#,#ymd#,#nyusya_ymd#,#zipcode#,#addr1#,#addr2#,#bango#)
+	</insert>
+
+	<select id="getSyainByS_idx" parameterClass="int" resultClass="jp.TsudaJun.SyainKanri.Model.Syain">
+		select * from syaincode where s_idx=#s_idx#
+	</select>
+	
+	
+
+	<update id="update" parameterClass="jp.TsudaJun.SyainKanri.Model.Syain">
+		update syaincode set s_idx=#s_idx#, s_name1=#s_name1#, s_name2=#s_name2#, sex=#sex#, ymd=#ymd#, nyusya_ymd=#nyusya_ymd#, zipcode=#zipcode#, addr1=#addr1#, addr2=#addr2#, bango=#bango# where s_idx=#s_idx#
+	</update>
+	
+	<!-- <delete id="delete" parameterClass="int">
+		delete from erpex2 <include refid="whereQuery"/>
+	</delete> -->
+</sqlMap>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+        
+		<action name="list" class="jp.TsudaJun.SyainKanri.Action.ListAction" method="execute">
+			<result name="ok">/list.jsp</result>
+			<result name="fail">/error.jsp</result>
+		</action>
+		
+		<action name="getmaxno" class="jp.TsudaJun.SyainKanri.Action.GetMaxNoAction" method="execute">
+			<result name="ok">/insertform.jsp</result>
+			<result name="fail">/error.jsp</result>
+		</action>
+		
+		<action name="insertok" class="jp.TsudaJun.SyainKanri.Action.InsertAction" method="execute">
+			<result name="ok">/index.jsp</result>
+			<result name="input">/insertform.jsp</result>
+			<result name="fail">/error.jsp</result>
+		</action>
+		
+		<action name="updateform" class="jp.TsudaJun.SyainKanri.Action.UpdateFormAction" method="execute">
+			<result name="ok">/updateform.jsp</result>
+			<result name="fail">/error.jsp</result>
+		</action>
+		
+		<action name="update" class="jp.TsudaJun.SyainKanri.Action.UpdateAction" method="execute">
+			<result name="ok">/index.jsp</result>
+			<result name="input">/updateform.jsp</result>
+			<result name="fail">/error.jsp</result>
+		</action>
+		
+		<!--  <action name="search" class="custom.action.SearchAction" method="search">
+			<result name="ok">/list.jsp</result>
+			<result name="fail">/error.jsp</result>
+		</action> -->
+	</package>
+	<constant name="struts.custom.i18n.resources" value="message" />
+</struts>
