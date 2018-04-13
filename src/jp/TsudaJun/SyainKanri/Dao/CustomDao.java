@@ -44,6 +44,10 @@ public class CustomDao {
 	public static void Update(Syain syain) throws SQLException{
 		sqlmap.update("update",syain);
 	}
+	
+	public static void Delete(int s_idx) throws SQLException{
+		sqlmap.delete("delete",s_idx);
+	}
 
 
 }

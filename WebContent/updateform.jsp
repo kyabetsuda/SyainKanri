@@ -15,6 +15,7 @@
 		location.href='http://localhost:8080/SyainKanri/index.jsp';
 	}
 </script>
+<script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
 </head>
 <body>
 <center>
@@ -75,7 +76,7 @@
 		<tr>
 			<td>郵便番号</td>
 			<td>
-				<input type="text" value="<s:property value="zipcode"/>" name="zipcode">
+				<input type="text" value="<s:property value="zipcode"/>" name="zipcode" onKeyUp="AjaxZip3.zip2addr(this,'','addr1','addr2');">
 			</td>
 		</tr>
 		<tr>

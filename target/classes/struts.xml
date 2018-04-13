@@ -30,6 +30,11 @@
 			<result name="fail">/error.jsp</result>
 		</action>
 		
+		<action name="delete" class="jp.TsudaJun.SyainKanri.Action.DeleteAction" method="execute">
+			<result name="ok">/index.jsp</result>
+			<result name="fail">/error.jsp</result>
+		</action>
+		
 		<!--  <action name="search" class="custom.action.SearchAction" method="search">
 			<result name="ok">/list.jsp</result>
 			<result name="fail">/error.jsp</result>
